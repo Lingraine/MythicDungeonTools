@@ -450,14 +450,6 @@ function MDT:CreateDevPanel(frame)
         end)
         container:AddChild(blipsMovableCheckbox)
 
-        --blips scrollable toggle
-        local blipsScrollableCheckbox = AceGUI:Create("CheckBox")
-        blipsScrollableCheckbox:SetLabel("Blips Scrollable")
-        blipsScrollableCheckbox:SetCallback("OnValueChanged",function (widget,callbackName,value)
-            db.devModeBlipsScrollable = value or nil
-        end)
-        container:AddChild(blipsScrollableCheckbox)
-
         --clone options
 
         --group
@@ -644,7 +636,6 @@ function MDT:CreateDevPanel(frame)
             cloneGroup:SetText(currentCloneGroup)
         end
         blipsMovableCheckbox:SetValue(db.devModeBlipsMovable)
-        blipsScrollableCheckbox:SetValue(db.devModeBlipsScrollable)
 
         local button3 = AceGUI:Create("Button")
         button3:SetText("Export to LUA")
