@@ -2275,12 +2275,12 @@ end
 
 ---IsCurrentPresetFortified
 function MDT:IsCurrentPresetFortified()
-    return self:GetCurrentPreset().week%2 == 1
+    return self:GetCurrentPreset().week%2 == 0
 end
 
 ---IsCurrentPresetTyrannical
 function MDT:IsCurrentPresetTyrannical()
-    return not MDT:IsCurrentPresetFortified()
+    return self:GetCurrentPreset().week%2 == 1
 end
 
 ---MouseDownHook
